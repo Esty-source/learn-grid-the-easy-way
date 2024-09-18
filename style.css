@@ -1,5 +1,5 @@
 :root {
-  --clr-primary-400: 263 55% 52%;
+  --clr-primary-400: 263 55% 52%; /* sets whether an element must be moved below (cleared) floating elements that precede it */
   --clr-secondary-400: 217 19% 35%;
   --clr-secondary-500: 219 29% 14%;
   --clr-neutral-100: 0 0% 100%;
@@ -75,6 +75,7 @@ select {
   font: inherit;
 }
 
+/* @media can be used to apply part of a style sheet based on the result of one or more media queries.*/
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
@@ -145,8 +146,8 @@ h3 {
 /* components */
 .testimonial-grid {
   display: grid;
-  gap: 1.5rem;
-  grid-auto-columns: 1fr;
+  gap: 1.5rem; /* puts some gap between the different articules */ /* the repeat functions helps for grids repeat(3, 100px) */
+  grid-auto-columns: 1fr;  /* helps in given definite sizes for the colums of the grid */ /* 1fr gives the unit the same size */
   grid-template-areas:
    'one'
    'two'
